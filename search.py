@@ -5,11 +5,9 @@ while len(unique_numbers) < 100: #цикл крутится, пока не на�
     if num not in unique_numbers: #проверяю на уникальность, операторы членства in/not in
         unique_numbers.append(num)
 swapped = True
-#кручу цикл, пока в массиве есть что переставлять
-while swapped:
+while swapped: #кручу цикл, пока в массиве есть что переставлять
     swapped = False
-    #иду по списку до предпоследнего элемента
-    for i in range(len(unique_numbers) - 1):
+    for i in range(len(unique_numbers) - 1): #иду по списку до предпоследнего элемента
         if unique_numbers[i] > unique_numbers[i + 1]: #если левое число больше правого, то они стоят неправильно
             unique_numbers[i], unique_numbers[i + 1] = unique_numbers[i + 1], unique_numbers[i]#меняю элементы местами
             swapped = True 
